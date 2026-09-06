@@ -6,7 +6,7 @@ A [Nexo](https://nexomc.com/products/nexo) resource pack server extension that u
 ## Requirements
 
 - A server running [Nexo](https://nexomc.com/products/nexo).
-- A Dropbox App with OAuth2 configured, and a long-lived [**refresh token**](https://stackoverflow.com/a/71794390) for that app.
+- A [Dropbox App](https://www.dropbox.com/developers/apps/create?_tk=pilot_lp&_ad=ctabtn1&_camp=create) with OAuth2 configured, and a long-lived [**refresh token**](https://stackoverflow.com/a/71794390) for that app.
 
 
 ## Configuration
