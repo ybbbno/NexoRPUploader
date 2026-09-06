@@ -1,10 +1,11 @@
 plugins {
     id 'java'
-    id("xyz.jpenilla.run-paper") version "2.3.1"
+    id "com.gradleup.shadow" version "9.4.1"
+    id 'org.jetbrains.kotlin.jvm' version '2.4.0'
 }
 
-group = 'me.ybbbno'
-version = '1.1'
+group = 'com.sunphantom'
+version = '0.1'
 
 repositories {
     mavenCentral()
@@ -12,19 +13,28 @@ repositories {
         name = "papermc-repo"
         url = "https://repo.papermc.io/repository/maven-public/"
     }
+
+    maven {
+        url = "https://repo.nexomc.com/releases"
+    }
 }
 
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:1.21.11-R0.1-SNAPSHOT")
+    compileOnly "io.papermc.paper:paper-api:1.21.11-R0.1-SNAPSHOT"
+    compileOnly "com.nexomc:nexo:1.27.0"
+    compileOnly "org.jetbrains.kotlin:kotlin-stdlib:2.4.20-RC2"
+    implementation 'com.dropbox.core:dropbox-core-sdk:8.0.2'
+    implementation files("libs/YBMJ-0.1.5.jar")
 }
 
-tasks {
-    runServer {
-        // Configure the Minecraft version for our task.
-        // This is the only required configuration besides applying the plugin.
-        // Your plugin's jar (or shadowJar if present) will be used automatically.
-        minecraftVersion("1.21")
-    }
+shadowJar {
+    archiveClassifier.set('')
+
+    exclude 'me/deadybbb/ybmj/paper-plugin.yml'
+
+    relocate "me.deadybbb.YBMJ", "${project.group}"
+
+    minimize()
 }
 
 def targetJavaVersion = 21
