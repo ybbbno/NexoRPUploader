@@ -5,7 +5,7 @@ A [Nexo](https://nexomc.com/products/nexo) resource pack server extension that u
 
 ## Requirements
 
-- A server running [Nexo](https://nexomc.com/products/nexo) (must be installed and loaded **before** this plugin).
+- A server running [Nexo](https://nexomc.com/products/nexo).
 - A Dropbox App with OAuth2 configured, and a long-lived [**refresh token**](https://stackoverflow.com/a/71794390) for that app.
 
 
