@@ -1,4 +1,4 @@
-package com.sunphantom.nexorpuploader;
+package me.ybbbno.nexorpuploader;
 
 import com.nexomc.nexo.pack.server.NexoPackServer;
 import com.nexomc.nexo.pack.server.PackServerRegistry;

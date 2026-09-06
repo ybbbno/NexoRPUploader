@@ -1,6 +1,6 @@
 name: NexoRPUploader
 version: '0.1'
-main: com.sunphantom.nexorpuploader.NexoRPUploader
+main: me.ybbbno.nexorpuploader.NexoRPUploader
 api-version: '1.21'
 authors: [ ybbbno ]
 dependencies:

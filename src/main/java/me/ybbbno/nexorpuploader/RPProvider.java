@@ -1,4 +1,4 @@
-package com.sunphantom.nexorpuploader;
+package me.ybbbno.nexorpuploader;
 
 import com.dropbox.core.DbxException;
 import com.dropbox.core.DbxRequestConfig;
